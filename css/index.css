@@ -4,6 +4,12 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
+ /*Temporary upgrading the website*/
+ a.disabled{
+	 pointer-events:none;
+	 cursor: default;
+ }
+ /*Temporary upgrading the website*/
 .marquee-hidden{
 	visibility:hidden;
 }
