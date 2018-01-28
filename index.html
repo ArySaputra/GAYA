@@ -83,6 +83,30 @@
 	<div id="main" class="main">
 		<!-- Header -->
 		<a name="home"></a>
+		
+		<!-- POP UP ADVERTISEMENT -->
+		<!-- <div class="col-md-6 col-md-offset-3 col-sm-12"> -->
+		<div id="myModal" class="modal fade" role="dialog" >
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h5 class="modal-title">Early Bird Promotion!!</h5>
+					</div>
+					<div class="modal-body">
+						<img src="./img/earlybird.jpg"	align="center" alt="Early Bird Promotion Details" height="450">
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">No thanks!</button>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<!-- </div> -->
+		
+		<!-- POP UP ADVERTISEMENT -->
+		
 		<section id="video-section" class="intro">
 			<div id="youtube-container" class="row">
 				<div class="col-xs-12">
@@ -761,6 +785,13 @@
     <!-- jQuery -->
     <script src="./js/jquery.min.js"></script>
 
+	<!-- POP UP ADVERTISEMENT-->
+	<script>
+		$(window).load(function(){        
+		$('#myModal').modal('show');
+		}); 
+	</script>
+	
     <!-- Bootstrap Core JavaScript -->
     <script src="./js/bootstrap.min.js"></script>
 
