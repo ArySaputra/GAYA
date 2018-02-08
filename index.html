@@ -662,14 +662,14 @@
                       
                       
                       <div class="row"><div class="col-md-4 col-sm-5 col-xs-offset-1"><p class="lead smaller">Premiere ($27):</p></div>
-                      <div class="col-md-7 col-sm-6"><input id="buy-tickets-m-3" type="number" class="form-control" min="0" disabled onchange="handleChangeMP(this);" ></input></p></div></div><div class="row"><div class="col-md-4 col-sm-5 col-xs-offset-1"><p class="lead smaller">Circle 1 ($23):</p></div>
-                      <div class="col-md-7 col-sm-6"><input id="buy-tickets-m-2" type="number" class="form-control" min="0" disabled onchange="handleChangeMC1(this);" ></input></p></div></div><div class="row"><div class="col-md-4 col-sm-5 col-xs-offset-1"><p class="lead smaller">Circle 2 ($18):</p></div>
-                      <div class="col-md-7 col-sm-6"><input id="buy-tickets-m-1" type="number" class="form-control" min="0" disabled onchange="handleChangeMC2(this);" ></input></p></div></div>
+                      <div class="col-md-7 col-sm-6"><input id="buy-tickets-m-3" type="number" class="form-control" min="0"  onchange="handleChangeMP(this);" ></input></p></div></div><div class="row"><div class="col-md-4 col-sm-5 col-xs-offset-1"><p class="lead smaller">Circle 1 ($23):</p></div>
+                      <div class="col-md-7 col-sm-6"><input id="buy-tickets-m-2" type="number" class="form-control" min="0"  onchange="handleChangeMC1(this);" ></input></p></div></div><div class="row"><div class="col-md-4 col-sm-5 col-xs-offset-1"><p class="lead smaller">Circle 2 ($18):</p></div>
+                      <div class="col-md-7 col-sm-6"><input id="buy-tickets-m-1" type="number" class="form-control" min="0"  onchange="handleChangeMC2(this);" ></input></p></div></div>
                       <div class="row"><div class="col-xs-12"><p class="lead" style="font-size:120%;font-weight:bold;">Night (7.30PM)</p></div></div>
                       <div class="row"><div class="col-md-4 col-sm-5 col-xs-offset-1"><p class="lead smaller">Premiere ($27):</p></div>
-                      <div class="col-md-7 col-sm-6"><input id="buy-tickets-n-3" type="number" class="form-control" min="0" disabled ></input></p></div></div><div class="row"><div class="col-md-4 col-sm-5 col-xs-offset-1"><p class="lead smaller">Circle 1 ($23):</p></div>
-				      <div class="col-md-7 col-sm-6"><input id="buy-tickets-n-2" type="number" class="form-control" min="0" disabled onchange="handleChangeNC1(this);"></input></p></div></div><div class="row"><div class="col-md-4 col-sm-5 col-xs-offset-1"><p class="lead smaller">Circle 2 ($18):</p></div>
-                      <div class="col-md-7 col-sm-6"><input id="buy-tickets-n-1" type="number" class="form-control" min="0" disabled onchange="handleChangeNC2(this);" ></input></p></div></div>
+                      <div class="col-md-7 col-sm-6"><input id="buy-tickets-n-3" type="number" class="form-control" min="0"  ></input></p></div></div><div class="row"><div class="col-md-4 col-sm-5 col-xs-offset-1"><p class="lead smaller">Circle 1 ($23):</p></div>
+				      <div class="col-md-7 col-sm-6"><input id="buy-tickets-n-2" type="number" class="form-control" min="0"  onchange="handleChangeNC1(this);"></input></p></div></div><div class="row"><div class="col-md-4 col-sm-5 col-xs-offset-1"><p class="lead smaller">Circle 2 ($18):</p></div>
+                      <div class="col-md-7 col-sm-6"><input id="buy-tickets-n-1" type="number" class="form-control" min="0"  onchange="handleChangeNC2(this);" ></input></p></div></div>
                       <div class=row><div class="col-md-7 col-md-offset-5 col-sm-6 col-sm-offset-6 col-xs-6 col-xs-offset-6">
                         <button id="buy-tickets-submit-qty" class="btn button-default">Proceed Now</button>
                       </div></div>
@@ -683,7 +683,7 @@
 							<div class="col-md-6 col-sm-12"><form id="buy-tickets-order-details" style="display:none;">
 								<div class="row"><div class="col-xs-12 lead2">
 									<p style="font-size:0.9em">Please transfer the total cost of <b>$<span id="buy-tickets-total">0</span></b> to this account:<br/>
-									OCBC Frank <b>(579-058868-001) Kevin Sebastian </b><br>
+									OCBC Frank <b>(579-082371-001) Tommy Johnson </b><br>
 									Please fill in the transaction information below <b>AFTER</b> payment.</br>
 									Order will only be confirmed <b>AFTER</b> the following information is submitted.</p>
 								</div></div>
@@ -699,7 +699,7 @@
 											<div class="row"><div class="col-md-3 col-sm-4 col-xs-5">Contact No:</div>
 											<div class="col-md-9 col-sm-8 col-xs-7"><input id="buy-tickets-contact-no" type="tel" class="form-control" required></input></p></div></div>
 											<div class="row">
-												<div class="col-md-3 col-sm-4 col-xs-5" title="Transaction number refers to the transaction number of your transfer receipt.">Transaction Number:</div>
+												<div class="col-md-3 col-sm-4 col-xs-5" title="Transaction number refers to the transaction number of your transfer receipt.">(Bank) Transaction Number:</div>
 												<div class="col-md-9 col-sm-8 col-xs-7"><input id="buy-tickets-transaction-no" class="form-control" required></input></p></div>
 											</div>
 											<div class=row><div class="col-md-9 col-md-offset-3 col-sm-8 col-sm-offset-4 col-xs-7 col-xs-offset-5">
@@ -925,11 +925,11 @@
 		$("#buy-tickets-submit-qty").click(function(e){
 			var total = 0;
 			if (parseInt($('#buy-tickets-m-1').val()) > 0){ total += 18*parseInt($('#buy-tickets-m-1').val()); }
-			if (parseInt($('#buy-tickets-m-2').val()) > 0){ total += 22*parseInt($('#buy-tickets-m-2').val()); }
-			if (parseInt($('#buy-tickets-m-3').val()) > 0){ total += 25*parseInt($('#buy-tickets-m-3').val()); }
+			if (parseInt($('#buy-tickets-m-2').val()) > 0){ total += 23*parseInt($('#buy-tickets-m-2').val()); }
+			if (parseInt($('#buy-tickets-m-3').val()) > 0){ total += 27*parseInt($('#buy-tickets-m-3').val()); }
 			if (parseInt($('#buy-tickets-n-1').val()) > 0){ total += 18*parseInt($('#buy-tickets-n-1').val()); }
-			if (parseInt($('#buy-tickets-n-2').val()) > 0){ total += 22*parseInt($('#buy-tickets-n-2').val()); }
-			if (parseInt($('#buy-tickets-n-3').val()) > 0){ total += 25*parseInt($('#buy-tickets-n-3').val()); }
+			if (parseInt($('#buy-tickets-n-2').val()) > 0){ total += 23*parseInt($('#buy-tickets-n-2').val()); }
+			if (parseInt($('#buy-tickets-n-3').val()) > 0){ total += 27*parseInt($('#buy-tickets-n-3').val()); }
 			if (total > 0){
 				$('#buy-tickets-m-1').prop("disabled", true);
 				$('#buy-tickets-m-2').prop("disabled", true);
@@ -977,13 +977,13 @@
 			form_url+= "&entry.1470262624=" + $('#buy-tickets-email').val();
 			form_url+= "&entry.631403752=" + $('#buy-tickets-contact-no').val();
 			form_url+= "&entry.1736035799=" + $('#buy-tickets-institution').val();
-			form_url+= "&entry.699081299=" + $('#buy-tickets-m-1').val();
-			form_url+= "&entry.463044465=" + $('#buy-tickets-m-2').val();
-			form_url+= "&entry.2048189887=" + $('#buy-tickets-m-3').val();
-			form_url+= "&entry.847528222=" + $('#buy-tickets-n-1').val();
-			form_url+= "&entry.1144778483=" + $('#buy-tickets-n-2').val();
-			form_url+= "&entry.1465148840=" + $('#buy-tickets-n-3').val();
-			form_url+= "&entry.506733786=" + $('#buy-tickets-transaction-no').val();
+			form_url+= "&entry.158131389=" + $('#buy-tickets-m-1').val();
+			form_url+= "&entry.506468455=" + $('#buy-tickets-m-2').val();
+			form_url+= "&entry.1451477069=" + $('#buy-tickets-m-3').val();
+			form_url+= "&entry.1703522554=" + $('#buy-tickets-n-1').val();
+			form_url+= "&entry.1004015112=" + $('#buy-tickets-n-2').val();
+			form_url+= "&entry.3399768=" + $('#buy-tickets-n-3').val();
+			form_url+= "&entry.1148975389=" + $('#buy-tickets-transaction-no').val();
 			
 			https://docs.google.com/forms/d/1VmdQVcheY74MGTBWiM6ZlXhdWDCJ6nHQRgzdJgV7TFU/viewform?entry.1973465673=1&entry.750056183=2&entry.2139719722=3&entry.1994161155=4&entry.678320240=m1&entry.872718582=m2&entry.600895542=m3&entry.2057638998=n1&entry.929809371=n2&entry.608522794=n3&entry.1973340271=tn&entry.1636413779=tt 
 			
